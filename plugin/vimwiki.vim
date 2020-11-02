@@ -402,15 +402,15 @@ let s:map_prefix = vimwiki#vars#get_global('map_prefix')
 
 " default global key mappings
 if str2nr(vimwiki#vars#get_global('key_mappings').global)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wi', '<Plug>VimwikiIndex', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wv', '<Plug>VimwikiTabIndex', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',ws', '<Plug>VimwikiUISelect', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wd', '<Plug>VimwikiDiaryIndex', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wz', '<Plug>VimwikiDiaryGenerateLinks', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wn', '<Plug>VimwikiMakeDiaryNote', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wV', '<Plug>VimwikiTabMakeDiaryNote', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wy', '<Plug>VimwikiMakeYesterdayDiaryNote', 2)
-  call vimwiki#u#map_key('n', s:map_prefix . ',wm', '<Plug>VimwikiMakeTomorrowDiaryNote', 2)
+  call vimwiki#u#map_key('n',  ',wi', '<Plug>VimwikiIndex', 2)
+  call vimwiki#u#map_key('n',  ',wv', '<Plug>VimwikiTabIndex', 2)
+  call vimwiki#u#map_key('n',  ',ws', '<Plug>VimwikiUISelect', 2)
+  call vimwiki#u#map_key('n',  ',wd', '<Plug>VimwikiDiaryIndex', 2)
+  call vimwiki#u#map_key('n',  ',wz', '<Plug>VimwikiDiaryGenerateLinks', 2)
+  call vimwiki#u#map_key('n',  ',wn', '<Plug>VimwikiMakeDiaryNote', 2)
+  call vimwiki#u#map_key('n',  ',wV', '<Plug>VimwikiTabMakeDiaryNote', 2)
+  call vimwiki#u#map_key('n',  ',wy', '<Plug>VimwikiMakeYesterdayDiaryNote', 2)
+  call vimwiki#u#map_key('n',  ',wm', '<Plug>VimwikiMakeTomorrowDiaryNote', 2)
 endif
 
 

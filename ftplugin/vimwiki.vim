@@ -257,7 +257,7 @@ command! -buffer -nargs=* VimwikiVSplitLink call vimwiki#base#follow_link('vspli
 
 command! -buffer -nargs=? VimwikiNormalizeLink call vimwiki#base#normalize_link(<f-args>)
 
-command! -buffer VimwikiTabnewLink call vimwiki#base#follow_link('tab', 0, 1)
+command! -buffer VimwikiTabnewLink call vimwiki#base#follow_link('ctrl-n', 0, 1)
 
 command! -buffer -nargs=? VimwikiGenerateLinks call vimwiki#base#generate_links(1, <f-args>)
 
@@ -378,22 +378,22 @@ nnoremap <silent><script><buffer> <Plug>VimwikiDiaryPrevDay
 
 " default links key mappings
 if str2nr(vimwiki#vars#get_global('key_mappings').links)
-  call vimwiki#u#map_key('n', '<CR>', '<Plug>VimwikiFollowLink')
+  call vimwiki#u#map_key('n', 'gf', '<Plug>VimwikiFollowLink')
   call vimwiki#u#map_key('n', '<S-CR>', '<Plug>VimwikiSplitLink')
   call vimwiki#u#map_key('n', '<C-CR>', '<Plug>VimwikiVSplitLink')
   call vimwiki#u#map_key('n', '+', '<Plug>VimwikiNormalizeLink')
   call vimwiki#u#map_key('v', '+', '<Plug>VimwikiNormalizeLinkVisual')
-  call vimwiki#u#map_key('v', '<CR>', '<Plug>VimwikiNormalizeLinkVisualCR')
+  call vimwiki#u#map_key('v', 'gf', '<Plug>VimwikiNormalizeLinkVisualCR')
   call vimwiki#u#map_key('n', '<D-CR>', '<Plug>VimwikiTabnewLink')
   call vimwiki#u#map_key('n', '<C-S-CR>', '<Plug>VimwikiTabnewLink', 1)
-  call vimwiki#u#map_key('n', '<BS>', '<Plug>VimwikiGoBackLink')
-  call vimwiki#u#map_key('n', '<TAB>', '<Plug>VimwikiNextLink')
-  call vimwiki#u#map_key('n', '<S-TAB>', '<Plug>VimwikiPrevLink')
-  call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'n', '<Plug>VimwikiGoto')
-  call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'d', '<Plug>VimwikiDeleteFile')
-  call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'r', '<Plug>VimwikiRenameFile')
-  call vimwiki#u#map_key('n', '<C-Down>', '<Plug>VimwikiDiaryNextDay')
-  call vimwiki#u#map_key('n', '<C-Up>', '<Plug>VimwikiDiaryPrevDay')
+  call vimwiki#u#map_key('n', '<gb>', '<Plug>VimwikiGoBackLink')
+  call vimwiki#u#map_key('n', '<C-n>', '<Plug>VimwikiNextLink')
+  call vimwiki#u#map_key('n', '<C-p>', '<Plug>VimwikiPrevLink')
+  call vimwiki#u#map_key('n', ',ww', '<Plug>VimwikiGoto')
+  call vimwiki#u#map_key('n', ',wD', '<Plug>VimwikiDeleteFile')
+  call vimwiki#u#map_key('n', ',wr', '<Plug>VimwikiRenameFile')
+  call vimwiki#u#map_key('n', '<C-Up>', '<Plug>VimwikiDiaryNextDay')
+  call vimwiki#u#map_key('n', '<C-Down>', '<Plug>VimwikiDiaryPrevDay')
 endif
 
 " <Plug> lists definitions
